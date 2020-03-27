@@ -1,0 +1,13 @@
+Air Date:
+<%= @episode.date %>
+<br>
+Guests:
+<% @guests.each do |guest| %>
+    <%= guest.name %>
+<% end %>
+
+
+
+# - Episode date
+# - A list of the guests who were on that episode
+# - Each guest's name should link to the Guest Show page

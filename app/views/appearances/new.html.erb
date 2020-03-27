@@ -1,0 +1,26 @@
+Choose Guest:
+<li>
+<%= @guest_list.each do |guest| %>
+    * <%= guest.name %>
+    <br>    
+<% end %>
+</li>
+#################################################################################################################################################
+
+I have no idea know why a giant block of objects appears here.
+The next thing I need to do, beyond fixing that, is turn each item on each episode_list
+into a link to said item's show page, I think.
+
+As for creating forms, I barely follow the pattern behind them at all. I know the first thing you pass in
+is assigned to be the name of the thing. I have to refer back to the labs and follow them step by step each time.
+
+#################################################################################################################################################
+
+<br>
+Choose Episode:
+<li>
+<% @episode_list.each do |episode| %>
+    *<%=episode.date %>
+    <br>
+<% end %>
+</li>

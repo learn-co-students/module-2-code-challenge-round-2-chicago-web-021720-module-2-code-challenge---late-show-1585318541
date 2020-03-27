@@ -1,0 +1,13 @@
+<h1>New Appearance Form:</h1>
+
+<% @appearance.errors.full_messages.each do |error| %>
+    <p><%= error %></p>
+<% end %>
+
+<%= form_for(@appearance) do |f| %>
+    <label>Guest: </label><%= f.collection_select :guest_id, @guests, :id, :name %><br>
+    <label>Episode: </label><%= f.collection_select :episode_id, @episodes, :id, :number %><br>
+    <label>Rating: </label><%= f.text_field :rating %><br>
+  
+    <%= f.submit %>
+<% end %>

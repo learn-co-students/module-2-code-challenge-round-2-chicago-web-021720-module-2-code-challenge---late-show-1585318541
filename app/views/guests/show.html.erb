@@ -1,0 +1,13 @@
+<h1><%= "Name: #{@guest.name}" %></h1>
+<h1><%= "Occupation: #{@guest.occupation.titleize}" %></h1>
+<br>
+
+<h1><%= "Appearances:" %></h1>
+<ul>
+  <% @guest.episodes.each do |episode| %>
+    <li>Episode: <%= link_to episode.number, episode_path %> | <%= "#{episode.date}" %> | <%= "#{episode.avg_rating}" %></li>
+  <% end %>
+</ul>
+<br>
+
+<%= link_to "Back To episodes", episodes_path %>

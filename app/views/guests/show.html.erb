@@ -1,0 +1,21 @@
+Guest name: <%= @guest.name %>
+
+Episodes they've been on: 
+<% @episodes.each do |episode| %>
+    Date:
+    <%= episode.date %><br>
+    Rating:
+    <%= episode.number %>
+
+<% end %>
+    
+
+
+# On the Guest show page, add a list of the Episodes the Guest has appeared on.
+
+# For each Episode, show the:
+
+# - date of the Episode
+# - rating for the Appearance
+
+# Each Episode date should link to the show page for that Episode.
